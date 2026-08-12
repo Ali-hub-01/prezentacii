@@ -295,6 +295,16 @@ p { margin: 0; }
   box-shadow: var(--shadow);
 }
 .work__slide { margin-bottom: 18px; }
+.work__img {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+  display: block;
+  border-radius: 10px;
+  border: 1px solid #2e2e2e;
+  transition: transform 0.35s ease;
+}
+.work:hover .work__img { transform: scale(1.03) rotate(-0.5deg); }
 
 /* мини-макет слайда */
 .slide {
