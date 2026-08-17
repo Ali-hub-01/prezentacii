@@ -2,6 +2,14 @@
 (function () {
   'use strict';
 
+  /* ---------- Google Ads: конверсия "Контакт" при клике по WhatsApp ---------- */
+  document.addEventListener('click', function (e) {
+    var a = e.target.closest ? e.target.closest('a[href^="https://wa.me"]') : null;
+    if (a && typeof window.gtag_report_contact === 'function') {
+      window.gtag_report_contact();
+    }
+  }, true);
+
   var prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
   /* ---------- Шапка: фон при скролле ---------- */

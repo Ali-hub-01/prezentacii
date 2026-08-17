@@ -3,6 +3,38 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=AW-18394118550"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'AW-18394118550');
+
+    // Конверсия "Интерактивные номера телефонов" — для tel:-ссылок (пока на сайте их нет; готова на будущее)
+    function gtag_report_conversion(url) {
+      var callback = function () {
+        if (typeof(url) != 'undefined') { window.location = url; }
+      };
+      gtag('event', 'conversion', {
+        'send_to': 'AW-18394118550/HJEQCKbIgeMcEJbz_8JE',
+        'value': 1.0,
+        'currency': 'USD',
+        'event_callback': callback
+      });
+      return false;
+    }
+    // Конверсия "Контакт" — срабатывает при клике по WhatsApp (основное целевое действие)
+    function gtag_report_contact() {
+      gtag('event', 'conversion', {
+        'send_to': 'AW-18394118550/GaGoCKvs8eIcEJbz_8JE',
+        'value': 1.0,
+        'currency': 'USD'
+      });
+    }
+  </script>
+
   <title>Студия презентаций - разработка деловых презентаций под ключ</title>
   <meta name="description" content="Деловые презентации для встреч, тендеров и инвесторов - от структуры и текста до вёрстки в PDF, готовой к печати. Средний срок 1-3 дня. От 2 500 ₸ за страницу.">
   <link rel="canonical" href="https://presentation-studio.kz/">
